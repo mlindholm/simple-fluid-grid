@@ -6,14 +6,17 @@
  *
  */
 
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	*behavior: url(path/to/boxsizing.htc); /* Support for IE6/7, remove if unneccessary */
+}
+
 [class*='col-'] {
     float: left;
     padding-left: 24px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    *behavior: url(path/to/boxsizing.htc); /* Support for IE6/7, remove if unneccessary */
 }
 
 .row { margin-left: -24px }
@@ -46,10 +49,7 @@
 
 .col-11 { width: 91.6666666667% }
 
-.col-12 {
-    margin-left: 0;
-    width: 100%;
-}
+.col-12 { width: 100% }
 
 .off-1 { margin-left: 8.33333333333% }
 
@@ -63,7 +63,7 @@
     padding-left: 24px;
 }
 
-@media only screen and (max-width: 640px) { 
+@media only screen and (max-width: 767px) { 
     [class*='col-'] {
         float: none;
         margin: 0;
